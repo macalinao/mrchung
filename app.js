@@ -15,7 +15,7 @@ const AntibodySchema = new Schema({
   catalogNumber: String,
   hostSpecies: String,
   reactivity: [String],
-  compatibility: [String],
+  compatibility: [CLARITY, SWITCH, MAP],
   image: String
 });
 
