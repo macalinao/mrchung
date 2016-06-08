@@ -1,3 +1,16 @@
+<script>
+  angular.module('checkboxReactivity', [])
+    .controller('ReactivityController', ['$scope', function($scope) {
+      $scope.checkboxReactivity = {
+       cow : false,
+       human : false,
+       mouse : false,
+       pig : false,
+       rat : false
+     };
+    }]);
+</script>
+
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
@@ -23,17 +36,22 @@
 
         <fieldset class="form-group">
           <label for="reactivity">Reactivity</label>
-          <input type="checkbox" class="checkbox" id="reactivity" placeholder="Reactivity" ng-model="data.reactivity">
+          <input type="checkbox" class="checkbox" id="reactivity" placeholder="Reactivity" ng-model="checkboxReactivity.reactivity">
         </fieldset>
 
         <fieldset class="form-group">
-          <label for="compatibility">Compatibility</label>
-            <input type = "checkbox" class="checkbox" id="compatibility" placeholder="Compatibility" ng-model="data.compatibility">
+          <label>Compatibility</label>
+          <label for="clarityComp">CLARITY</label>
+            <input type = "checkbox" class="checkbox" id="clarityComp" placeholder="Compatibility" ng-model="checkboxModel.value1">
+            <label for="switchComp">SWITCH</label>
+            <input type = "checkbox" class="checkbox" id="switchComp" placeholder="Compatibility" ng-model="checkboxModel.value2">
+            <label for="mapComp">MAP</label>
+            <input type = "checkbox" class="checkbox" id="mapComp" placeholder="Compatibility" ng-model="checkboxModel.value3">
         </fieldset>
 
         <fieldset class="form-group">
           <label for="image">Image Upload</label>
-          <input type="file" class="file" id="image" placeholder="Image" ng-model="data.image">
+          <input type="file" class="filswe" id="image" placeholder="Image" ng-model="data.image">
         </fieldset>
 
         <button type="submit" class="btn btn-primary" ng-click="submit()">Create Antibody</button>
