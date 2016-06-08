@@ -10,6 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,8 +22,5 @@
   "bugs": {
     "url": "https://github.com/simplyianm/mrchung/issues"
   },
-    "homepage": "https://github.com/simplyianm/mrchung#readme",
-    "scripts": {
-        "start": "node app"
-    }
+  "homepage": "https://github.com/simplyianm/mrchung#readme"
 }
