@@ -10,6 +10,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
 });
 
-app.controller('HomeCtrl', function($scope) {
+app.controller('HomeCtrl', function($scope, $http) {
+  $scope.data = {};
+
+  $scope.submit = function() {
+    $http.post('/antibodies', $scope.data).success(function(data) {
+      alert('Submitted!');
+      $scope.data = {};
+    });
+  };
 });
 
