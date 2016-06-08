@@ -9,16 +9,18 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
     <script type="text/javascript" src="/table.js"></script>
     <script type="text/javascript" src="http://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.csss">
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
   </head>
 
 	<body>
 	  <table id="table" class="display" cellspacing="0" width="100%">
 	    <thead>
 	      <tr>
-	        <th>Username</th>
-	        <th>Name</th>
-	        <th>Email</th>
+	        <th>Target</th>
+	        <th>Catalog Number</th>
+	        <th>Host Species</th>
+	        <th>Reactivity</th>
+	        <th>Compatibility</th>
 	      </tr>
 	    </thead>
 	  </table>
@@ -27,14 +29,16 @@
 	  <script type="text/javascript">
 	    $('#table').dataTable({
 	      ajax: {
-	        url: '/',
+	        url: '/antibodies',
 	        type: 'POST'
 	      },
 	      serverSide: true,
 	      columns: [
-	        {'data': 'username'},
-	        {'data': 'name'},
-	        {'data': 'email'}
+	        {'data': 'target'},
+	        {'data': 'catalogNumber'},
+	        {'data': 'hostSpeices'},
+	        {'data': 'reactivity'},
+	        {'data': 'compatibility'}
 	      ]
 	    });
 	  </script>
