@@ -1,5 +1,7 @@
 :base = http://localhost:3008
 
+GET :base/antibodies
+
 POST :base/antibodies
 Content-Type: application/json
 {

@@ -20,6 +20,12 @@ const AntibodySchema = new Schema({
 
 const Antibody = mongoose.model('antibody', AntibodySchema);
 
+app.get('/antibodies', (req, res) => {
+  Antibody.find({}).then((antibodies) => {
+    res.json(antibodies.map(a => a.toJSON()));
+  });
+});
+
 app.post('/antibodies', (req, res) => {
   const antibody = new Antibody(req.body);
   antibody.save().then((doc) => {
