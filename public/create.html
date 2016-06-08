@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Mr. Chung</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/table.js"></script>
+    <script type="text/javascript" src="http://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.csss">
+  </head>
+
+	<body>
+	  <table id="table" class="display" cellspacing="0" width="100%">
+	    <thead>
+	      <tr>
+	        <th>Username</th>
+	        <th>Name</th>
+	        <th>Email</th>
+	      </tr>
+	    </thead>
+	  </table>
+	  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	  <script type="text/javascript" src="http://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+	  <script type="text/javascript">
+	    $('#table').dataTable({
+	      ajax: {
+	        url: '/',
+	        type: 'POST'
+	      },
+	      serverSide: true,
+	      columns: [
+	        {'data': 'username'},
+	        {'data': 'name'},
+	        {'data': 'email'}
+	      ]
+	    });
+	  </script>
+	</body>
+ 
+</html>
