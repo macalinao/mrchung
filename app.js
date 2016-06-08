@@ -8,6 +8,7 @@ mongoose.connect(MONGODB_URI);
 
 const app = express();
 app.use(express.static(`${__dirname}/public`));
+app.use(bodyParser.json());
 
 const AntibodySchema = new Schema({
   target: String,
@@ -18,6 +19,10 @@ const AntibodySchema = new Schema({
 });
 
 const Antibody = mongoose.model('antibody', AntibodySchema);
+
+app.post('/antibodies', (req, res) => {
+  res.json(req.body);
+});
 
 const PORT = process.env.PORT || 3008;
 app.listen(PORT, () => {
