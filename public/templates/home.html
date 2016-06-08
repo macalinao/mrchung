@@ -35,18 +35,25 @@
         </fieldset>
 
         <fieldset class="form-group">
-          <label for="reactivity">Reactivity</label>
-          <input type="checkbox" class="checkbox" id="reactivity" placeholder="Reactivity" ng-model="checkboxReactivity.reactivity">
+          <label for="reactivityCow">Cow</label>
+          <input type="checkbox" class="checkbox" id="reactivityCow" ng-model="data.reactivity.cow">
+          <label for="reactivityHuman">Human</label>
+          <input type="checkbox" class="checkbox" id="reactivityHuman" ng-model="data.reactivity.human">
+          <label for="reactivityMouse">Mouse</label>
+          <input type="checkbox" class="checkbox" id="reactivityMouse" ng-model="data.reactivity.mouse">
+          <label for="reactivityPig">Pig</label>
+          <input type="checkbox" class="checkbox" id="reactivityPig" ng-model="data.reactivity.pig">
+          <label for="reactivityRat">Rat</label>
+          <input type="checkbox" class="checkbox" id="reactivityRat" ng-model="data.reactivity.rat">
         </fieldset>
 
         <fieldset class="form-group">
-          <label>Compatibility</label>
-          <label for="clarityComp">CLARITY</label>
-            <input type = "checkbox" class="checkbox" id="clarityComp" placeholder="Compatibility" ng-model="checkboxModel.value1">
-            <label for="switchComp">SWITCH</label>
-            <input type = "checkbox" class="checkbox" id="switchComp" placeholder="Compatibility" ng-model="checkboxModel.value2">
-            <label for="mapComp">MAP</label>
-            <input type = "checkbox" class="checkbox" id="mapComp" placeholder="Compatibility" ng-model="checkboxModel.value3">
+          <label for="clarityComp">Clarity</label>
+          <input type = "checkbox" class="checkbox" id="clarityComp" placeholder="Compatibility" ng-model="data.compatibility.clarity">
+          <label for="switchComp">Switch</label>
+          <input type = "checkbox" class="checkbox" id="switchComp" placeholder="Compatibility" ng-model="data.compatibility.switch">
+          <label for="mapComp">Map</label>
+          <input type = "checkbox" class="checkbox" id="mapComp" placeholder="Compatibility" ng-model="data.compatibility.map">
         </fieldset>
 
         <fieldset class="form-group">
