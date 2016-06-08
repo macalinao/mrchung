@@ -12,8 +12,33 @@
         </fieldset>
 
         <fieldset class="form-group">
-          <label for="catalogNumber">CatalogNumber</label>
-          <input type="text" class="form-control" id="catalogNumber" placeholder="CatalogNumber" ng-model="data.catalogNumber">
+          <label for="catalogNumber">Catalog Number</label>
+          <input type="text" class="form-control" id="catalogNumber" placeholder="Catalog Number" ng-model="data.catalogNumber">
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="hostSpecies">Host Species</label>
+          <input type="text" class="form-control" id="hostSpecies" placeholder="Host Species" ng-model="data.hostSpecies">
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="reactivity">Reactivity</label>
+          <input type="checkbox" class="checkbox" id="reactivity" placeholder="Reactivity" ng-model="data.reactivity">
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="compatibility">Compatibility</label>
+          <label for="compatibility">CLARITY</label>
+            <input type="checkbox" class="form-control" id="compatibility" placeholder="Compatibility" ng-model="data.catalogNumber">
+          <label for="compatibility">SWITCH</label>
+            <input type="checkbox" class="form-control" id="compatibility" placeholder="Compatibility" ng-model="data.catalogNumber">
+          <label for="compatibility">MAP</label>
+            <input type="checkbox" class="form-control" id="compatibility" placeholder="Compatibility" ng-model="data.catalogNumber">
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="image">Image Upload</label>
+          <input type="file" class="file" id="image" placeholder="Image" ng-model="data.image">
         </fieldset>
 
         <button type="submit" class="btn btn-primary" ng-click="submit()">Create Antibody</button>
