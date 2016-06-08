@@ -9,19 +9,16 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
     <script type="text/javascript" src="/table.js"></script>
     <script type="text/javascript" src="http://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.csss">
   </head>
 
-<<<<<<< HEAD
 	<body>
 	  <table id="table" class="display" cellspacing="0" width="100%">
 	    <thead>
 	      <tr>
-	        <th>Target</th>
-	        <th>Catalog Number</th>
-	        <th>Host Species</th>
-	        <th>Reactivity</th>
-	        <th>Compatibility</th>
+	        <th>Username</th>
+	        <th>Name</th>
+	        <th>Email</th>
 	      </tr>
 	    </thead>
 	  </table>
@@ -30,24 +27,17 @@
 	  <script type="text/javascript">
 	    $('#table').dataTable({
 	      ajax: {
-	        url: '/antibodies',
+	        url: '/',
 	        type: 'POST'
 	      },
 	      serverSide: true,
 	      columns: [
-	        {'data': 'target'},
-	        {'data': 'catalogNumber'},
-	        {'data': 'hostSpeices'},
-	        {'data': 'reactivity'},
-	        {'data': 'compatibility'}
+	        {'data': 'username'},
+	        {'data': 'name'},
+	        {'data': 'email'}
 	      ]
 	    });
 	  </script>
 	</body>
-=======
-  <body ng-app="mrchung">
-  	<div ui-view></div>
-  </body>
->>>>>>> parent of 0db6859... redo
  
 </html>
