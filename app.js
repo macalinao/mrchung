@@ -21,7 +21,10 @@ const AntibodySchema = new Schema({
 const Antibody = mongoose.model('antibody', AntibodySchema);
 
 app.post('/antibodies', (req, res) => {
-  res.json(req.body);
+  const antibody = new Antibody(req.body);
+  antibody.save().then((doc) => {
+    res.json(doc.toJSON());
+  });
 });
 
 const PORT = process.env.PORT || 3008;
