@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/simplyianm/mrchung/issues"
   },
+  "engines": {
+    "node": "6"
+  },
   "homepage": "https://github.com/simplyianm/mrchung#readme"
 }
