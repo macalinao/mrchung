@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/simplyianm/mrchung/issues"
   },
-  "homepage": "https://github.com/simplyianm/mrchung#readme"
+    "homepage": "https://github.com/simplyianm/mrchung#readme",
+    "scripts": {
+        "start": "node app"
+    }
 }
