@@ -1,0 +1,11 @@
+:base = http://localhost:3008
+
+POST :base/antibodies
+Content-Type: application/json
+{
+  "target": "asdf",
+  "catalogNumber": "2003",
+  "hostSpecies": "dylan",
+  "reactivity": ["dog", "cat"],
+  "compatibility": ["moose", "dylan"]
+}
