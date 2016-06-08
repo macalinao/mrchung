@@ -15,7 +15,8 @@ const AntibodySchema = new Schema({
   catalogNumber: String,
   hostSpecies: String,
   reactivity: [String],
-  compatibility: [String]
+  compatibility: [String],
+  image: String
 });
 
 const Antibody = mongoose.model('antibody', AntibodySchema);
