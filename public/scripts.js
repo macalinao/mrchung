@@ -1,4 +1,4 @@
-var app = angular.module('mrchung', ['ui.router']);
+var app = angular.module('mrchung', ['ui.router', 'tableSort']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -6,11 +6,24 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/',
       controller: 'HomeCtrl',
       templateUrl: 'templates/home.html'
+    })
+    .state('create', {
+      url: '/create',
+      controller: 'CreateCtrl',
+      templateUrl: 'templates/create.html'
     });
   $urlRouterProvider.otherwise('/');
 });
 
 app.controller('HomeCtrl', function($scope, $http) {
+  $scope.query = '';
+  $scope.data = [];
+  $http.get('/antibodies').then(function (data) {
+    $scope.data = data.data;
+  });
+});
+
+app.controller('CreateCtrl', function($scope, $http) {
   function resetData() {
     $scope.data = {
       reactivity: {},

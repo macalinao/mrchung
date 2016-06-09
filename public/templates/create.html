@@ -1,0 +1,77 @@
+<script>
+  angular.module('checkboxReactivity', [])
+    .controller('ReactivityController', ['$scope', function($scope) {
+      $scope.checkboxReactivity = {
+       cow : false,
+       human : false,
+       mouse : false,
+       pig : false,
+       rat : false
+     };
+    }]);
+</script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <h1 class="page-header">Create antibody</h1>
+
+      <form>
+
+        <fieldset class="form-group">
+          <label for="target">Target</label>
+          <input type="text" class="form-control" id="target" placeholder="Target" ng-model="data.target">
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="catalogNumber">Catalog Number</label>
+          <input type="text" class="form-control" id="catalogNumber" placeholder="Catalog Number" ng-model="data.catalogNumber">
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="hostSpecies">Host Species</label>
+          <select class="form-control" id="sel1" id="hostSpecies" ng-model="data.hostSpecies">
+            <option>Human</option>
+            <option>Mouse</option>
+            <option>Rabbit</option>
+            <option>Rat</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="reactivity">Reactivity</label>
+          <label for="reactivityCow">Cow</label>
+          <input type="checkbox" class="checkbox" id="reactivityCow" ng-model="data.reactivity.cow">
+          <label for="reactivityHuman">Human</label>
+          <input type="checkbox" class="checkbox" id="reactivityHuman" ng-model="data.reactivity.human">
+          <label for="reactivityMouse">Mouse</label>
+          <input type="checkbox" class="checkbox" id="reactivityMouse" ng-model="data.reactivity.mouse">
+          <label for="reactivityPig">Pig</label>
+          <input type="checkbox" class="checkbox" id="reactivityPig" ng-model="data.reactivity.pig">
+          <label for="reactivityRat">Rat</label>
+          <input type="checkbox" class="checkbox" id="reactivityRat" ng-model="data.reactivity.rat">
+        </fieldset>
+
+        <fieldset class="form-group">
+        <label>Compatibility</label>
+          <label for="clarityComp">Clarity</label>
+          <input type = "checkbox" class="checkbox" id="clarityComp" placeholder="Compatibility" ng-model="data.compatibility.clarity">
+          <label for="switchComp">Switch</label>
+          <input type = "checkbox" class="checkbox" id="switchComp" placeholder="Compatibility" ng-model="data.compatibility.switch">
+          <label for="mapComp">Map</label>
+          <input type = "checkbox" class="checkbox" id="mapComp" placeholder="Compatibility" ng-model="data.compatibility.map">
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="image">Image Upload</label>
+          <input type="file" class="filswe" id="image" placeholder="Image" ng-model="data.image">
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary" ng-click="submit()">Create Antibody</button>
+
+      </form>
+
+    </div>
+  </div>
+</div>
