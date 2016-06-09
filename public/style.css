@@ -1,3 +1,7 @@
 .checkboxCSS {
-	padding-left: 30px;
+	padding-left: 0px;
+}
+
+.checkboxTitle {
+	font-weight: 300;
 }
