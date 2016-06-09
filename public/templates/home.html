@@ -26,7 +26,7 @@
             <td>{{ a.hostSpecies }}</td>
             <td>{{ a.reactivity.join(', ') }}</td>
             <td>{{ a.compatiblity.join(', ') }}</td>
-            <td><img ng-src="{{ a.image }" /></td>
+            <td><img ng-src="data:image/png;base64,{{ a.image }}" /></td>
           </tr>
         </tbody>
       </table>

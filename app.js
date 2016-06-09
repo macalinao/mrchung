@@ -24,7 +24,7 @@ const Antibody = mongoose.model('antibody', AntibodySchema);
 app.get('/antibodies', (req, res) => {
   Antibody.find({}).then((antibodies) => {
     res.json(antibodies.map(a => a.toJSON()));
-  });
+  }).catch((err) => res.json({ error: err }));
 });
 
 app.post('/antibodies', (req, res) => {

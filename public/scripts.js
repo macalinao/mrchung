@@ -1,4 +1,4 @@
-var app = angular.module('mrchung', ['ui.router', 'tableSort']);
+var app = angular.module('mrchung', ['ui.router', 'tableSort', 'naif.base64']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -39,14 +39,14 @@ app.controller('CreateCtrl', function($scope, $http) {
   function adaptNgToMongoose(data) {
     data.compatibility = objToSet(data.compatibility);
     data.reactivity = objToSet(data.reactivity);
+    data.image = data.image.base64;
     return data;
   }
 
   $scope.submit = function() {
     $http.post('/antibodies', adaptNgToMongoose($scope.data)).success(function(data) {
       alert('Submitted!');
-      resetData();
-    });
+      resetData();});
   };
 });
 
