@@ -31,7 +31,7 @@ app.post('/antibodies', (req, res) => {
   const antibody = new Antibody(req.body);
   antibody.save().then((doc) => {
     res.json(doc.toJSON());
-  });
+  }).catch((err) => res.json({ error: err }));
 });
 
 const PORT = process.env.PORT || 3008;
