@@ -23,8 +23,8 @@
             <td>{{ a.target }}</td>
             <td>{{ a.catalogNumber }}</td>
             <td>{{ a.hostSpecies }}</td>
-            <td>{{ a.reactivity }}</td>
-            <td>{{ a.compatiblity }}</td>
+            <td>{{ a.reactivity.join(', ') }}</td>
+            <td>{{ a.compatiblity.join(', ') }}</td>
           </tr>
         </tbody>
       </table>
