@@ -25,30 +25,30 @@
   		<div class="col-sm-10"><h1 class="targetName">Antibody Target Name</h1></div>
     </div>
     <div class="row">
-  		<div class="col-sm-4"><!--left col--> 
+  		<div class="col-sm-4"><!--left col-->
 
           <ul class="list-group">
             <li class="list-group-item text-muted">Overview <i class="fa fa-dashboard fa-1x"></i></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Catalog Number</strong></span> 123abc</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Host Species</strong></span> Rat</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Reactivity</strong></span> Rat, Pig</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Compatibility</strong></span> SWITCH, MAP</li>
-          </ul> 
-               
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Catalog Number</strong></span>{{ antibody.catalogNumber }}</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Host Species</strong></span>{{ antibody.hostSpecies }}</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Reactivity</strong></span>{{ antibody.reactivity.join(', ') }}</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Compatibility</strong></span>{{ antibody.compatibility.join(', ') }}</li>
+          </ul>
+
           <div class="panel panel-default">
             <div class="panel-heading">Vendor<i class="fa fa-link fa-1x"></i></div>
             <div class="panel-body"><a href="website from mongodb">Vendor Website</a></div>
           </div>
-               
+
           <div class="panel panel-default">
             <div class="panel-heading">Relevant Publications</div>
             <div class="panel-body"><a href="website from mongodb">Publication #1</a></div>
 
           </div>
-          
+
         </div><!--/col-4-->
     	<div class="col-sm-8">
-              
+
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">

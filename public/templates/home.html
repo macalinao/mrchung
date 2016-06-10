@@ -41,7 +41,7 @@
         </thead>
         <tbody>
           <tr ng-repeat="a in data | filter:query" ts-repeat>
-            <td>{{ a.target }}</td>
+            <td><a ng-href="#/profile/{{ a._id  }}">{{ a.target }}</a></td>
             <td>{{ a.catalogNumber }}</td>
             <td>{{ a.hostSpecies }}</td>
             <td>{{ a.reactivity.join(', ') }}</td>

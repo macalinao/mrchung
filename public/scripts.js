@@ -13,7 +13,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/create.html'
     })
     .state('profile', {
-      url: '/profile',
+      url: '/profile/:id',
       controller: 'ProfileCtrl',
       templateUrl: 'templates/profile.html'
     });
@@ -55,3 +55,8 @@ app.controller('CreateCtrl', function($scope, $http) {
   };
 });
 
+app.controller('ProfileCtrl', function($scope, $stateParams, $http) {
+  $http.get('/antibodies/' + $stateParams.id).success(function(data) {
+    $scope.antibody = data;
+  });
+});
