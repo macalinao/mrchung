@@ -29,6 +29,12 @@ app.get('/antibodies', (req, res) => {
   }).catch((err) => res.json({ error: err }));
 });
 
+app.get('/antibodies/:id', (req, res) => {
+  Antibody.findOne({ _id: req.params.id }).then((antibody) => {
+    res.json(antibody.toJSON());
+  }).catch((err) => res.json({ error: err }));
+});
+
 app.post('/antibodies', (req, res) => {
   const antibody = new Antibody(req.body);
   antibody.save().then((doc) => {
