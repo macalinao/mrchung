@@ -54,14 +54,14 @@
       <form>
 
         <div class="md-form">
-          <input type="text" class="form-control" id="target" placeholder="Target" ng-model="data.target">
+          <input type="text" class="form-control" id="target" ng-model="data.target">
           <label for="target">Target</label>
         </div>
 
-        <fieldset class="form-group">
+        <div class="md-form">
+          <input type="text" class="form-control" id="catalogNumber" ng-model="data.catalogNumber">
           <label for="catalogNumber">Catalog Number</label>
-          <input type="text" class="form-control" id="catalogNumber" placeholder="Catalog Number" ng-model="data.catalogNumber">
-        </fieldset>
+        </div>
 
         <fieldset class="form-group">
           <label for="hostSpecies">Host Species</label>
@@ -77,24 +77,24 @@
           <label for="reactivity">Reactivity</label>
           <div class="checkboxCSS">
           <div class="checkboxItem">
-          <label for="reactivityCow" class="checkboxTitle">Cow</label>
           <input type="checkbox" class="checkbox-inline" id="reactivityCow" ng-model="data.reactivity.Cow">
+            <label for="reactivityCow" class="checkboxTitle">Cow</label>
           </div>
           <div class="checkboxItem">
-          <label for="reactivityHuman" class="checkboxTitle">Human</label>
           <input type="checkbox" class="checkbox-inline" id="reactivityHuman" ng-model="data.reactivity.Human">
+            <label for="reactivityHuman" class="checkboxTitle">Human</label>
           </div>
           <div class="checkboxItem">
-          <label for="reactivityMouse" class="checkboxTitle">Mouse</label>
           <input type="checkbox" class="checkbox-inline" id="reactivityMouse" ng-model="data.reactivity.Mouse">
+            <label for="reactivityMouse" class="checkboxTitle">Mouse</label>
           </div>
           <div class="checkboxItem">
-          <label for="reactivityPig" class="checkboxTitle">Pig</label>
           <input type="checkbox" class="checkbox-inline" id="reactivityPig" ng-model="data.reactivity.Pig">
+            <label for="reactivityPig" class="checkboxTitle">Pig</label>
           </div>
           <div class="checkboxItem">
-          <label for="reactivityRat" class="checkboxTitle">Rat</label>
           <input type="checkbox" class="checkbox-inline" id="reactivityRat" ng-model="data.reactivity.Rat">
+            <label for="reactivityRat" class="checkboxTitle">Rat</label>
           </div>
           </div>
         </fieldset>
@@ -117,10 +117,10 @@
         </div>
         </fieldset>
 
-        <fieldset class="form-group">
-          <label for="vendorWebiste">Vendor Website</label>
-          <input type="text" class="form-control" id="vendorWebsite" placeholder="Enter the URL" ng-model="data.vendorWebsite">
-        </fieldset>
+        <div class="md-form">
+          <label for="vendorWebiste">Vendor Website URL</label>
+          <input type="text" class="form-control" id="vendorWebsite" ng-model="data.vendorWebsite">
+        </div>
 
        <!-- <fieldset class="form-group">
           <label for="image">Publication Upload</label>
