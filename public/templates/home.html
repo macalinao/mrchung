@@ -35,7 +35,9 @@
             <th ts-criteria="catalogNumber">Catalog Number</th>
             <th ts-criteria="hostSpecies">Host Species</th>
             <th>Reactivity</th>
-            <th>Compatibility</th>
+            <th>CLARITY</th>
+            <th>SWITCH</th>
+            <th>MAP</th>
             <th>Image</th>
           </tr>
         </thead>
@@ -45,7 +47,9 @@
             <td>{{ a.catalogNumber }}</td>
             <td>{{ a.hostSpecies }}</td>
             <td>{{ a.reactivity.join(', ') }}</td>
-            <td>{{ a.compatibility.join(', ') }}</td>
+            <td>{{ a.compatibility.clarity }}</td>
+            <td>{{ a.compatibility.switch }}</td>
+            <td>{{ a.compatibility.map }}</td>
             <td><img ng-src="data:image/png;base64,{{ a.image }}" /></td>
           </tr>
         </tbody>
