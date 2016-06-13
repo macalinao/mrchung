@@ -56,10 +56,10 @@
 
           <ul class="list-group">
             <li class="list-group-item text-muted">Overview </li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Catalog Number</strong></span><span class="pull-right">{{ antibody.catalogNumber }}</span></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Host Species</strong></span><span class="pull-right">{{ antibody.hostSpecies }}</span></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Reactivity</strong></span><span class="pull-right">{{ antibody.reactivity.join(', ') }}</span></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Compatibility</strong></span><span class="pull-right">{{ antibody.compatibility.join(', ') }}</span></li>
+            <li class="list-group-item"><span class="pull-xs-right">{{ antibody.catalogNumber }}</span><strong>Catalog Number</strong></li>
+            <li class="list-group-item"><span class="pull-xs-right">{{ antibody.hostSpecies }}</span><strong>Host Species</strong></li>
+            <li class="list-group-item"><span class="pull-right">{{ antibody.reactivity.join(', ') }}</span><strong>Reactivity</strong></li>
+            <li class="list-group-item"><span class="pull-right">{{ antibody.compatibility.join(', ') }}</span><strong>Compatibility</strong></li>
           </ul>
 
           <div class="panel panel-default">
