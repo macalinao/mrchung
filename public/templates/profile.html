@@ -63,29 +63,29 @@
           </ul>
 
           <ul class="list-group">
-            <li class="list-group-item text-muted">Relevant Publications</li>
-            <a class="list-group-item">Publication #1</a>
-            <a class="list-group-item">Publication #2</a>
+            <a class="list-group-item text-muted" ng-href="{{ antibody.vendorWebsite }}"><strong class="purchaseBtn">Purchase from a Selected Vendor</strong></a>
           </ul>
-
-          <ul class="list-group">
-            <li class="list-group-item text-muted">Protocols</li>
-            <a class="list-group-item" href="clarityprotocol.pdf">CLARITY</a>
-            <a class="list-group-item" href="switchprotocol.pdf">SWITCH</a>
-          </ul>
-
-          <ul class="list-group">
-            <a class="list-group-item text-muted" ng-href="{{ antibody.vendorWebsite }}"><strong>Purchase from a Selected Vendor</strong></a>
-          </ul>
-
-
-          
-
-
         </div><!--/col-4-->
 
-        <div class="col-sm-8">
+
+
+        <div class="col-sm-4">
           <img ng-src="data:image/png;base64,{{ antibody.image }}">
-        </div><!--/col-8-->
+        </div><!--/col-4-->
+
+        <div class=col-sm-4>
+          <ul class="list-group">
+              <li class="list-group-item text-muted">Relevant Publications</li>
+              <a class="list-group-item">Publication #1</a>
+              <a class="list-group-item">Publication #2</a>
+            </ul>
+
+            <ul class="list-group">
+              <li class="list-group-item text-muted">Protocols</li>
+              <a class="list-group-item" href="clarityprotocol.pdf">CLARITY</a>
+              <a class="list-group-item" href="switchprotocol.pdf">SWITCH</a>
+            </ul>
+        </div> <!--col4-->
+
 
     </div><!--/row-->
