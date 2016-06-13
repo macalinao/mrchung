@@ -13,3 +13,9 @@
 .targetName {
 	padding-bottom: 30px;
 }
+
+.protocol {
+	list-style: none;
+	list-style-type: none;
+
+}
