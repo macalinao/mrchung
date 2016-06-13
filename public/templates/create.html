@@ -98,27 +98,34 @@
 
         <fieldset class="form-group formElement">
         <label class="formTitle">Compatibility</label>
+        <ul class="protocol">
+        <li>
         <select class="compatibilityOptions" id="clarity" ng-model="data.clarity">
             <option>Yes</option>
             <option>No</option>
             <option>Untested</option>
         </select>
           <label for="clarity">CLARITY</label>
+        </li>
 
+        <li>
         <select class="compatibilityOptions" id="switch" ng-model="data.switch">
             <option>Yes</option>
             <option>No</option>
             <option>Untested</option>
         </select>
           <label for="clarity">SWITCH</label>
+        </li>
 
+        <li>
         <select class="compatibilityOptions" id="map" ng-model="data.map">
             <option>Yes</option>
             <option>No</option>
             <option>Untested</option>
         </select>
           <label for="clarity">MAP</label>
-
+        </li>
+        </ul>
         </fieldset>
 
         <div class="md-form">
