@@ -1,3 +1,4 @@
+<div class="navigation">
 <!--Navbar-->
 <nav class="navbar navbar-dark bg-primary">
 
@@ -14,11 +15,11 @@
             <a class="navbar-brand" href="#">Chung Antibody Database</a>
             <!--Links-->
             <ul class="nav navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/#/create">Add a New Antibody</a>
-                </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#/create">Add a New Antibody</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="http://www.chunglab.org/">Chung Lab</a>
@@ -32,6 +33,10 @@
                     </div>
                 </li>
             </ul>
+            <!--Search form-->
+            <form class="form-inline">
+                <input type="text" ng-model="query" class="form-control" placeholder="Search">
+            </form>
         </div>
         <!--/.Collapse content-->
 
@@ -39,6 +44,8 @@
 
 </nav>
 <!--/.Navbar-->
+</div>
+
 
 <div class="container">
   <div class="row">
