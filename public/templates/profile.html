@@ -55,11 +55,11 @@
   		<div class="col-sm-4"><!--left col-->
 
           <ul class="list-group">
-            <li class="list-group-item text-muted">Overview <i class="fa fa-dashboard fa-1x"></i></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Catalog Number</strong></span>{{ antibody.catalogNumber }}</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Host Species</strong></span>{{ antibody.hostSpecies }}</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Reactivity</strong></span>{{ antibody.reactivity.join(', ') }}</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Compatibility</strong></span>{{ antibody.compatibility.join(', ') }}</li>
+            <li class="list-group-item text-muted">Overview</li>
+            <li class="list-group-item pull-right"><<strong class="pull-left">Catalog Number</strong>{{ antibody.catalogNumber }}</li>
+            <li class="list-group-item pull-right"><span class="pull-left"><strong>Host Species</strong></span>{{ antibody.hostSpecies }}</li>
+            <li class="list-group-item pull-right"><span class="pull-left"><strong>Reactivity</strong></span>{{ antibody.reactivity.join(', ') }}</li>
+            <li class="list-group-item pull-right"><span class="pull-left"><strong>Compatibility</strong></span>{{ antibody.compatibility.join(', ') }}</li>
           </ul>
 
           <div class="panel panel-default">
