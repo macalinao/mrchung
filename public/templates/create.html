@@ -98,20 +98,13 @@
 
         <fieldset class="form-group formElement">
         <label class="formTitle">Compatibility</label>
-         <div class="checkboxCSS">
-         <div class="checkboxItem">
-          <input type = "checkbox" class="checkbox-inline" id="clarityComp" placeholder="Compatibility" ng-model="data.compatibility.CLARITY">
-            <label for="clarityComp" class="checkboxTitle">CLARITY</label>
-          </div>
-          <div class="checkboxItem">
-          <input type = "checkbox" class="checkbox-inline" id="switchComp" placeholder="Compatibility" ng-model="data.compatibility.SWITCH">
-            <label for="switchComp" class="checkboxTitle">SWITCH</label>
-          </div>
-          <div class="checkboxItem">
-          <input type = "checkbox" class="checkbox-inline" id="mapComp" placeholder="Compatibility" ng-model="data.compatibility.MAP">
-            <label for="mapComp" class="checkboxTitle">MAP</label>
-          </div>
-        </div>
+        <select id="clarity" ng-model="data.clarity">
+            <option>Yes</option>
+            <option>No</option>
+            <option>Untested</option>
+        </select>
+          <label for="clarity">CLARITY</label>
+
         </fieldset>
 
         <div class="md-form">
