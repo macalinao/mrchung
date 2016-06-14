@@ -1,4 +1,9 @@
-var app = angular.module('mrchung', ['ui.router', 'tableSort', 'naif.base64']);
+var app = angular.module('mrchung', [
+  'ui.router',
+  'tableSort',
+  'naif.base64',
+  'ngFileUpload'
+]);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
