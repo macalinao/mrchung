@@ -101,7 +101,7 @@
         <ul class="protocol">
         <li>
         <select class="compatibilityOptions" id="clarity" ng-model="data.clarity">
-            <option class="yesMan">Yes</option>
+            <option>Yes</option>
             <option>No</option>
             <option>Untested</option>
         </select>
@@ -141,6 +141,16 @@
         <fieldset class="form-group formElement">
           <label for="image" class="formTitle">Image Upload</label>
           <input type="file" class="filswe" id="image" placeholder="Image" ng-model="data.image" base-sixty-four-input>
+        </fieldset>
+
+        <fieldset class="form-group formElement">
+          <label for="video" class="formTitle">Video Upload</label>
+          <input type="file" class="filswe" id="image" placeholder="Video" ng-model="data.video">
+        </fieldset>
+
+        <fieldset class="form-group formElement">
+          <label for="video" class="formTitle">Relevant Publications</label>
+          <input type="file" class="filswe" id="publications" placeholder="Upload Publications" ng-model="data.publications">
         </fieldset>
 
         <button type="submit" class="btn btn-primary" ng-click="submit()">Create Antibody</button>
