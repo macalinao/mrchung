@@ -25,6 +25,9 @@ const AntibodySchema = new Schema({
 
 const Antibody = mongoose.model('antibody', AntibodySchema);
 
+const AWS = require('aws-sdk');
+AWS.config.update({region: 'us-west-2'});
+
 app.get('/antibodies', (req, res) => {
   Antibody.find({}).then((antibodies) => {
     res.json(antibodies.map(a => a.toJSON()));

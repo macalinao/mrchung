@@ -4,6 +4,7 @@
   "description": "Mr. Chung.",
   "main": "app.js",
   "dependencies": {
+    "aws-sdk": "^2.3.19",
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "mongoose": "^4.4.20"
