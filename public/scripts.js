@@ -5,6 +5,22 @@ var app = angular.module('mrchung', [
   'ngFileUpload'
 ]);
 
+function adaptMongoooseToNg(data) {
+  data.compatibility = setToObj(data.compatibility);
+  data.reactivity = setToObj(data.reactivity);
+  data.image = {
+    base64: data.image
+  };
+  return data;
+}
+
+function adaptNgToMongoose(data) {
+  data.compatibility = objToSet(data.compatibility);
+  data.reactivity = objToSet(data.reactivity);
+  data.image = data.image.base64;
+  return data;
+}
+
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
@@ -48,13 +64,6 @@ app.controller('CreateCtrl', function($scope, $http, $location) {
     return Object.keys(obj).filter(k => obj[k] === true);
   }
 
-  function adaptNgToMongoose(data) {
-    data.compatibility = objToSet(data.compatibility);
-    data.reactivity = objToSet(data.reactivity);
-    data.image = data.image.base64;
-    return data;
-  }
-
   $scope.submit = function() {
     $http.post('/antibodies', adaptNgToMongoose($scope.data)).success(function(data) {
       alert('Submitted!');
@@ -78,22 +87,6 @@ app.controller('EditCtrl', function($scope, $http, $location, $stateParams) {
       ret[el] = true;
     });
     return ret;
-  }
-
-  function adaptMongoooseToNg(data) {
-    data.compatibility = setToObj(data.compatibility);
-    data.reactivity = setToObj(data.reactivity);
-    data.image = {
-      base64: data.image
-    };
-    return data;
-  }
-
-  function adaptNgToMongoose(data) {
-    data.compatibility = objToSet(data.compatibility);
-    data.reactivity = objToSet(data.reactivity);
-    data.image = data.image.base64;
-    return data;
   }
 
   $scope.submit = function() {
