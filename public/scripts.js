@@ -5,7 +5,19 @@ var app = angular.module('mrchung', [
   'ngFileUpload'
 ]);
 
-function adaptMongoooseToNg(data) {
+function objToSet(obj) {
+  return Object.keys(obj).filter(k => obj[k] === true);
+}
+
+function setToObj(set) {
+  var ret = {};
+  set.forEach(function(el) {
+    ret[el] = true;
+  });
+  return ret;
+}
+
+function adaptMongooseToNg(data) {
   data.compatibility = setToObj(data.compatibility);
   data.reactivity = setToObj(data.reactivity);
   data.image = {
@@ -60,10 +72,6 @@ app.controller('CreateCtrl', function($scope, $http, $location) {
     compatibility: {}
   };
 
-  function objToSet(obj) {
-    return Object.keys(obj).filter(k => obj[k] === true);
-  }
-
   $scope.submit = function() {
     $http.post('/antibodies', adaptNgToMongoose($scope.data)).success(function(data) {
       alert('Submitted!');
@@ -80,14 +88,6 @@ app.controller('EditCtrl', function($scope, $http, $location, $stateParams) {
   $http.get('/antibodies/' + $stateParams.id).success(function(data) {
     $scope.data = adaptMongooseToNg(data);
   });
-
-  function setToObj(set) {
-    var ret = {};
-    set.forEach(function(el) {
-      ret[el] = true;
-    });
-    return ret;
-  }
 
   $scope.submit = function() {
     $http.post('/antibodies', adaptNgToMongoose($scope.data)).success(function(data) {
