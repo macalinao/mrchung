@@ -45,13 +45,12 @@
 
 <div class="container">
 	<div class="row">
-  		<div class="col-sm-10"><h1 class="page-header profileTitle">{{ antibody.target }}</h1></div>
+  		<div class="col-sm-10"><h1 class="page-header profileTitle">{{ antibody.target }}</h1><a href="#/profile/{{ antibody._id }}/edit" class="btn btn-primary">Edit</a></div>
     </div>
     <div class="row">
   		<div class="col-sm-4"><!--left col-->
 
       <div class="listDiv">
-        <a href="#/profile/{{ antibody._id }}/edit" class="btn btn-primary">Edit</a>
           <ul class="list-group">
             <li class="list-group-item text-muted">Overview </li>
             <li class="list-group-item"><span class="pull-xs-right">{{ antibody.catalogNumber }}</span><strong>Catalog Number</strong></li>
