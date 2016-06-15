@@ -18,7 +18,6 @@ function setToObj(set) {
 }
 
 function adaptMongooseToNg(data) {
-  data.compatibility = setToObj(data.compatibility);
   data.reactivity = setToObj(data.reactivity);
   data.image = {
     base64: data.image
@@ -27,7 +26,6 @@ function adaptMongooseToNg(data) {
 }
 
 function adaptNgToMongoose(data) {
-  data.compatibility = objToSet(data.compatibility);
   data.reactivity = objToSet(data.reactivity);
   data.image = data.image.base64;
   return data;
