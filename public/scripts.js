@@ -18,7 +18,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/create.html'
     })
     .state('edit', {
-      url: '/edit',
+      url: '/profile/:id/edit',
       controller: 'EditCtrl',
       templateUrl: 'templates/edit.html'
     })
