@@ -52,12 +52,10 @@
 
         <div class="md-form">
           <input placeholder="Target" type="text" class="form-control" id="target" ng-model="data.target">
-          <label for="target">Target</label>
         </div>
 
         <div class="md-form">
-          <label for="catalogNumber">Catalog Number</label>
-          <input type="text" class="form-control" id="catalogNumber" ng-model="data.catalogNumber">
+          <input placeholder="Catalog Number" type="text" class="form-control" id="catalogNumber" ng-model="data.catalogNumber">
         </div>
 
         <fieldset class="form-group formElement">
@@ -129,8 +127,7 @@
         </fieldset>
 
         <div class="md-form">
-          <label for="vendorWebiste">Vendor Website URL</label>
-          <input type="text" class="form-control" id="vendorWebsite" ng-model="data.vendorWebsite">
+          <input placeholder="Vendor Website URL" type="text" class="form-control" id="vendorWebsite" ng-model="data.vendorWebsite">
         </div>
 
        <fieldset class="form-group">
@@ -140,7 +137,7 @@
 
         <fieldset class="form-group formElement">
           <label for="image" class="formTitle">Publication Upload</label>
-          <div class="button" ngf-select ng-model="files" ngf-multiple="true">Select</div>
+          <button ngf-select ng-model="files" ngf-multiple="true">Select</div>
 
         </fieldset>
 
