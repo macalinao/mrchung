@@ -17,6 +17,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller: 'CreateCtrl',
       templateUrl: 'templates/create.html'
     })
+    .state('edit', {
+      url: '/edit',
+      controller: 'EditCtrl',
+      templateUrl: 'templates/edit.html'
+    })
     .state('profile', {
       url: '/profile/:id',
       controller: 'ProfileCtrl',
@@ -33,14 +38,11 @@ app.controller('HomeCtrl', function($scope, $http) {
   });
 });
 
-app.controller('CreateCtrl', function($scope, $http) {
-  function resetData() {
-    $scope.data = {
-      reactivity: {},
-      compatibility: {}
-    };
-  }
-  resetData();
+app.controller('CreateCtrl', function($scope, $http, $location) {
+  $scope.data = {
+    reactivity: {},
+    compatibility: {}
+  };
 
   function objToSet(obj) {
     return Object.keys(obj).filter(k => obj[k] === true);
@@ -56,7 +58,49 @@ app.controller('CreateCtrl', function($scope, $http) {
   $scope.submit = function() {
     $http.post('/antibodies', adaptNgToMongoose($scope.data)).success(function(data) {
       alert('Submitted!');
-      resetData();});
+      $location.path('/');
+    });
+  };
+});
+
+app.controller('EditCtrl', function($scope, $http, $location, $stateParams) {
+  $scope.data = {
+    reactivity: {},
+    compatibility: {}
+  };
+  $http.get('/antibodies/' + $stateParams.id).success(function(data) {
+    $scope.data = adaptMongooseToNg(data);
+  });
+
+  function setToObj(set) {
+    var ret = {};
+    set.forEach(function(el) {
+      ret[el] = true;
+    });
+    return ret;
+  }
+
+  function adaptMongoooseToNg(data) {
+    data.compatibility = setToObj(data.compatibility);
+    data.reactivity = setToObj(data.reactivity);
+    data.image = {
+      base64: data.image
+    };
+    return data;
+  }
+
+  function adaptNgToMongoose(data) {
+    data.compatibility = objToSet(data.compatibility);
+    data.reactivity = objToSet(data.reactivity);
+    data.image = data.image.base64;
+    return data;
+  }
+
+  $scope.submit = function() {
+    $http.post('/antibodies', adaptNgToMongoose($scope.data)).success(function(data) {
+      alert('Submitted!');
+      $location.path('/');
+    });
   };
 });
 
