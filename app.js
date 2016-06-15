@@ -40,6 +40,15 @@ app.get('/antibodies/:id', (req, res) => {
   }).catch((err) => res.json({ error: err }));
 });
 
+app.put('/antibodies/:id', (req, res) => {
+    Antibody.remove({ _id: req.params.id }).then(() => {
+      const antibody = new Antibody(req.body);
+      return antibody.save();
+    }).then((doc) => {
+      res.json(doc.toJSON());
+    }).catch((err) => res.json({ error: err }));
+});
+
 app.post('/antibodies', (req, res) => {
   const antibody = new Antibody(req.body);
   antibody.save().then((doc) => {
