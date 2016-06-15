@@ -88,7 +88,7 @@ app.controller('EditCtrl', function($scope, $http, $location, $stateParams) {
   });
 
   $scope.submit = function() {
-    $http.post('/antibodies', adaptNgToMongoose($scope.data)).success(function(data) {
+    $http.put('/antibodies/' + $stateParams.id, adaptNgToMongoose($scope.data)).success(function(data) {
       alert('Submitted!');
       $location.path('/');
     });
