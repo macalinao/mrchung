@@ -71,9 +71,9 @@
             <td><a ng-href="#/profile/{{ a._id  }}">{{ a.target }}</a></td>
             <td>{{ a.catalogNumber }}</td>
             <td>{{ a.hostSpecies }}</td>
-            <td>{{ a.clarity }}{{ a.reactivityC(' + strs.join(', ') + '}}</td>
-            <td>{{ a.switch }}</td>
-            <td>{{ a.map }}</td>
+            <td>{{ a.clarity }}{{ a.reactivityC.join( (', ') )}}</td>
+            <td>{{ a.switch }}{{ a.reactivityS.join( (', ') )}}</td>
+            <td>{{ a.map }}{{ a.reactivityM.join( (', ') )}}</td>
           </tr>
         </tbody>
       </table>
