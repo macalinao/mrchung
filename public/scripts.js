@@ -19,6 +19,8 @@ function setToObj(set) {
 
 function adaptMongooseToNg(data) {
   data.reactivityC = setToObj(data.reactivityC);
+  data.reactivityS = setToObj(data.reactivityS);
+  data.reactivityM = setToObj(data.reactivityM);
   data.image = {
     base64: data.image
   };
@@ -27,6 +29,8 @@ function adaptMongooseToNg(data) {
 
 function adaptNgToMongoose(data) {
   data.reactivityC = objToSet(data.reactivityC);
+  data.reactivityS = objToSet(data.reactivityS);
+  data.reactivityM = objToSet(data.reactivityM);
   data.image = data.image.base64;
   return data;
 }
@@ -67,6 +71,8 @@ app.controller('HomeCtrl', function($scope, $http) {
 app.controller('CreateCtrl', function($scope, $http, $location) {
   $scope.data = {
     reactivityC: {},
+    reactivityS: {},
+    reactivityM: {},
     compatibility: {}
   };
 
@@ -81,6 +87,8 @@ app.controller('CreateCtrl', function($scope, $http, $location) {
 app.controller('EditCtrl', function($scope, $http, $location, $stateParams) {
   $scope.data = {
     reactivityC: {},
+    reactivityS: {},
+    reactivityM: {},
     compatibility: {}
   };
   $http.get('/antibodies/' + $stateParams.id).success(function(data) {

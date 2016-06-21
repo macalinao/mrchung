@@ -113,6 +113,31 @@
         </select>
           <label for="clarity">SWITCH</label>
         </li>
+          <fieldset class="form-group formElement">
+            <label for="reactivityS">Reactivity?</label>
+            <div class="checkboxCSS">
+            <div class="checkboxItem">
+            <input type="checkbox" class="checkbox-inline" id="reactivityScow" ng-model="data.reactivityS.Cow">
+              <label for="reactivityScow" class="checkboxTitle">Cow</label>
+            </div>
+            <div class="checkboxItem">
+            <input type="checkbox" class="checkbox-inline" id="reactivityShuman" ng-model="data.reactivityS.Human">
+              <label for="reactivityShuman" class="checkboxTitle">Human</label>
+            </div>
+            <div class="checkboxItem">
+            <input type="checkbox" class="checkbox-inline" id="reactivitySmouse" ng-model="data.reactivityS.Mouse">
+              <label for="reactivitySmouse" class="checkboxTitle">Mouse</label>
+            </div>
+            <div class="checkboxItem">
+            <input type="checkbox" class="checkbox-inline" id="reactivitySpig" ng-model="data.reactivityS.Pig">
+              <label for="reactivitySpig" class="checkboxTitle">Pig</label>
+            </div>
+            <div class="checkboxItem">
+            <input type="checkbox" class="checkbox-inline" id="reactivitySrat" ng-model="data.reactivityS.Rat">
+              <label for="reactivitySrat" class="checkboxTitle">Rat</label>
+            </div>
+            </div>
+          </fieldset>
 
         <li>
         <select class="compatibilityOptions" id="map" ng-model="data.map">
@@ -120,8 +145,33 @@
             <option>No</option>
             <option>Untested</option>
         </select>
-          <label for="clarity">MAP</label>
+          <label for="MAP">MAP</label>
         </li>
+          <fieldset class="form-group formElement">
+            <label for="reactivityM">Reactivity?</label>
+            <div class="checkboxCSS">
+            <div class="checkboxItem">
+            <input type="checkbox" class="checkbox-inline" id="reactivityMcow" ng-model="data.reactivityM.Cow">
+              <label for="reactivityMcow" class="checkboxTitle">Cow</label>
+            </div>
+            <div class="checkboxItem">
+            <input type="checkbox" class="checkbox-inline" id="reactivityMhuman" ng-model="data.reactivityM.Human">
+              <label for="reactivityMhuman" class="checkboxTitle">Human</label>
+            </div>
+            <div class="checkboxItem">
+            <input type="checkbox" class="checkbox-inline" id="reactivityMmouse" ng-model="data.reactivityM.Mouse">
+              <label for="reactivityMmouse" class="checkboxTitle">Mouse</label>
+            </div>
+            <div class="checkboxItem">
+            <input type="checkbox" class="checkbox-inline" id="reactivityMpig" ng-model="data.reactivityM.Pig">
+              <label for="reactivityMpig" class="checkboxTitle">Pig</label>
+            </div>
+            <div class="checkboxItem">
+            <input type="checkbox" class="checkbox-inline" id="reactivityMrat" ng-model="data.reactivityM.Rat">
+              <label for="reactivityMrat" class="checkboxTitle">Rat</label>
+            </div>
+            </div>
+          </fieldset>
         </ul>
         </fieldset>
 
