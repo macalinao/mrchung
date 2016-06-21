@@ -61,7 +61,6 @@
             <th ts-criteria="target">Target</th>
             <th ts-criteria="catalogNumber">Catalog Number</th>
             <th ts-criteria="hostSpecies">Host Species</th>
-            <th>Reactivity</th>
             <th>CLARITY</th>
             <th>SWITCH</th>
             <th>MAP</th>
@@ -72,7 +71,6 @@
             <td><a ng-href="#/profile/{{ a._id  }}">{{ a.target }}</a></td>
             <td>{{ a.catalogNumber }}</td>
             <td>{{ a.hostSpecies }}</td>
-            <td>{{ a.reactivity.join(', ') }}</td>
             <td>{{ a.clarity }}{{ a.reactivityC.join(', ') }}</td>
             <td>{{ a.switch }}</td>
             <td>{{ a.map }}</td>
