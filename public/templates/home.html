@@ -59,6 +59,7 @@
         <thead>
           <tr>
             <th ts-criteria="target">Target</th>
+            <th ts-criteria="vendorName">Vendor</th>
             <th ts-criteria="catalogNumber">Catalog Number</th>
             <th ts-criteria="hostSpecies">Host Species</th>
             <th>CLARITY</th>
@@ -69,11 +70,12 @@
         <tbody>
           <tr ng-repeat="a in data | filter:query" ts-repeat>
             <td><a ng-href="#/profile/{{ a._id  }}">{{ a.target }}</a></td>
+            <td>{{ a.vendorName }}</td>
             <td>{{ a.catalogNumber }}</td>
             <td>{{ a.hostSpecies }}</td>
-            <td>{{ a.clarity }}{{ a.reactivityC.join( (', ') )}}</td>
-            <td>{{ a.switch }}{{ a.reactivityS.join( (', ') )}}</td>
-            <td>{{ a.map }}{{ a.reactivityM.join( (', ') )}}</td>
+            <td>{{ a.clarity }} ({{ a.reactivityC.join( (', ') )})</td>
+            <td>{{ a.switch }} ({{ a.reactivityS.join( (', ') )})</td>
+            <td>{{ a.map }} ({{ a.reactivityM.join( (', ') )})</td>
           </tr>
         </tbody>
       </table>
