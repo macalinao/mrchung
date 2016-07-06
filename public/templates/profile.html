@@ -50,9 +50,11 @@
     <div class="row">
   		<div class="col-sm-4"><!--left col-->
 
+
       <div class="listDiv">
           <ul class="list-group">
             <li class="list-group-item text-muted">Overview </li>
+            <li class="list-group-item">{{ antibody.description }}</li>
             <li class="list-group-item"><span class="pull-xs-right">{{ antibody.vendorName }}</span><strong>Vendor Name</strong></li>
             <li class="list-group-item"><span class="pull-xs-right">{{ antibody.catalogNumber }}</span><strong>Catalog Number</strong></li>
             <li class="list-group-item"><span class="pull-xs-right">{{ antibody.hostSpecies }}</span><strong>Host Species</strong></li>
@@ -81,14 +83,10 @@
         </div>
 
 
+
+
         </div><!--/col-4-->
 
-<div class=card>
-<div class="card-block">
-        <!--Text-->
-        <p class="card-text">{{ antibody.description }}</p>
-    </div>
-</div>
 
         <div class="col-sm-6">
         <div class="card">
