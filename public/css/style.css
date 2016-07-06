@@ -3,8 +3,10 @@
 }
 
 .formTitle {
-	color: #757575;
 	font-size: 1rem;
+	padding-top: 20px;
+	font-weight: 300;
+	padding-bottom: 0px;
 }
 
 .checkboxTitle {
