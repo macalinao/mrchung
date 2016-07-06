@@ -4,6 +4,7 @@
   "description": "Mr. Chung.",
   "main": "app.js",
   "dependencies": {
+    "angular-youtube-embed": "^1.3.0",
     "aws-sdk": "^2.3.19",
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
