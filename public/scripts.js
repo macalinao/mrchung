@@ -103,3 +103,9 @@ app.controller('ProfileCtrl', function($scope, $stateParams, $http) {
     $scope.antibody = data;
   });
 });
+
+app.controller('ProfileCtrl', []).config(function($sceProvider) {
+  // Completely disable SCE.  For demonstration purposes only!
+  // Do not use in new projects.
+  $sceProvider.enabled(false);
+});
