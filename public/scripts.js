@@ -1,8 +1,7 @@
 var app = angular.module('mrchung', [
   'ui.router',
   'tableSort',
-  'ngFileUpload',
-  'youtube-embed'
+  'ngFileUpload'
 ]);
 
 function objToSet(obj) {
