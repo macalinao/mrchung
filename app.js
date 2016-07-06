@@ -12,7 +12,9 @@ app.use(bodyParser.json());
 
 const AntibodySchema = new Schema({
   target: String,
+  vendorName: String,
   catalogNumber: String,
+  vendorWebsite: String,
   hostSpecies: String,
   reactivity: [String],
   clarity: String,
@@ -21,9 +23,7 @@ const AntibodySchema = new Schema({
   reactivityS: [String],
   map: String,
   reactivityM: [String],
-  vendorWebsite: String,
   publication: String,
-  image: String
 });
 
 const Antibody = mongoose.model('antibody', AntibodySchema);

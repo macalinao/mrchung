@@ -1,7 +1,6 @@
 var app = angular.module('mrchung', [
   'ui.router',
   'tableSort',
-  'naif.base64',
   'ngFileUpload'
 ]);
 
@@ -21,9 +20,6 @@ function adaptMongooseToNg(data) {
   data.reactivityC = setToObj(data.reactivityC);
   data.reactivityS = setToObj(data.reactivityS);
   data.reactivityM = setToObj(data.reactivityM);
-  data.image = {
-    base64: data.image
-  };
   return data;
 }
 
@@ -31,7 +27,6 @@ function adaptNgToMongoose(data) {
   data.reactivityC = objToSet(data.reactivityC);
   data.reactivityS = objToSet(data.reactivityS);
   data.reactivityM = objToSet(data.reactivityM);
-  data.image = data.image.base64;
   return data;
 }
 
