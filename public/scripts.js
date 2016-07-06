@@ -104,7 +104,7 @@ app.controller('ProfileCtrl', function($scope, $stateParams, $http) {
   });
 });
 
-app.controller('ProfileCtrl', []).config(function($sceProvider) {
+app.config('ProfileCtrl', function($sceProvider) {
   // Completely disable SCE.  For demonstration purposes only!
   // Do not use in new projects.
   $sceProvider.enabled(false);
