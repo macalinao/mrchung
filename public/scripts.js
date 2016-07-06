@@ -104,7 +104,7 @@ app.controller('ProfileCtrl', function($scope, $stateParams, $http) {
   });
 });
 
-angular.module('ProfileCtrl', []).config(function($sceDelegateProvider) {
+angular.module('ProfileCtrl', function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
     // Allow same origin resource loads.
     'self',
