@@ -103,13 +103,3 @@ app.controller('ProfileCtrl', function($scope, $stateParams, $http) {
     $scope.antibody = data;
   });
 });
-
-app.controller('ProfileCtrl', function($sceDelegateProvider) {
-  $sceDelegateProvider.resourceUrlWhitelist([
-    // Allow same origin resource loads.
-    'self',
-    // Allow loading from our assets domain.  Notice the difference between * and **.
-    'https://www.youtube.com/**'
-  ]);
-
-  });
