@@ -61,7 +61,7 @@
 
         <div class="listDiv">
           <ul class="list-group">
-            <a class="list-group-item text-muted" ng-href="{{ antibody.vendorWebsite }}"><strong>Purchase from a Selected Vendor</strong></a>
+            <a class="list-group-item text-muted" ng-href="{{ antibody.vendorWebsite }}"><strong>Purchase from Vendor Website</strong></a>
           </ul>
         </div>
 
@@ -74,10 +74,23 @@
           </ul>
         </div>
 
+        <div class="listDiv">
+          <ul class="list-group">
+            <a class="list-group-item text-muted" ng-href="{{ antibody.protocolURL }}"><strong>View Protocol</strong></a>
+          </ul>
+        </div>
+
+
         </div><!--/col-4-->
 
         <div class="col-sm-6">
+        <div class="card">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/6AGT5AXPsxU" frameborder="0" allowfullscreen></iframe>
+           <div class="card-block">
+        <!--Text-->
+        <p class="card-text">{{ antibody.videoDescription }}</p>
+    </div>
+    </div>
 
           <!--Card-->
     <div class="card">
