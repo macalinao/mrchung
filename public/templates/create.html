@@ -46,31 +46,27 @@
 <h1 class="page-header createTitle">Add a New Antibody</h1>
 
 <form>
-    <div class="col-md-6">
 
-        <label class="formTitle" for="target">Target</label>
+  <div class="row">
+
+    <div class="col-md-6 formElement">
+            <label class="formTitle" for="target">Target</label>
         <div class="md-form"> <!--Left-->
           <input type="text" class="form-control" id="target" ng-model="data.target">
         </div>
+    </div>
 
-        <label class="formTitle" for="vendorName">Vendor Name</label>
-         <div class="md-form">
-          <input type="text" class="form-control" id="vendorName" ng-model="data.vendorName">
-        </div>
-
-        <label class="formTitle" for="catalogNumber">Catalog Number</label>
+    <div class="col-md-3 formElement">
+            <label class="formTitle" for="catalogNumber">Catalog Number</label>
         <div class="md-form">
           <input type="text" class="form-control" id="catalogNumber" ng-model="data.catalogNumber">
         </div>
+    </div>
 
-        <label class="formTitle" for="vendorWebsite">Product URL</label>
-         <div class="md-form">
-          <input type="text" class="form-control" id="vendorWebsite" ng-model="data.vendorWebsite">
-        </div>
-
-        <fieldset class="form-group formElement">
+    <div class="col-md-3 formElement">
+    <fieldset class="form-group">
           <label for="hostSpecies" class="formTitle">Host Species</label>
-          <select class="form-control" id="sel1" id="hostSpecies" ng-model="data.hostSpecies">
+          <select class="form-control selectorz" id="sel1" id="hostSpecies" ng-model="data.hostSpecies">
             <option>Human</option>
             <option>Mouse</option>
             <option>Rabbit</option>
@@ -78,11 +74,29 @@
           </select>
         </fieldset>
     </div>
+
+  </div>
+
+<div class="row">
+    <div class="col-md-3">
+
+        <label class="formTitle" for="vendorName">Vendor Name</label>
+         <div class="md-form">
+          <input type="text" class="form-control" id="vendorName" ng-model="data.vendorName">
+        </div>
+
+        <label class="formTitle" for="vendorWebsite">Vendor URL</label>
+         <div class="md-form">
+          <input type="text" class="form-control" id="vendorWebsite" ng-model="data.vendorWebsite">
+        </div>
+
+
+
+    </div>
     
-    <div class="col-md-6"> <!--Right-->
-        <fieldset class="form-group formElement">
-        <ul class="protocol">
-        <li>
+    <div class="col-md-3"> <!--Right-->
+        
+        <fieldset class="form-group">
         <label class="formTitle">CLARITY</label>
         <label for="clarity">Compatibility?</label>
         <select class="compatibilityOptions" id="clarity" ng-model="data.clarity">
@@ -90,7 +104,6 @@
             <option>No</option>
             <option>Untested</option>
         </select>
-        </li>
           <fieldset class="form-group formElement">
             <label for="reactivityC">Reactivity?</label>
             <div class="checkboxCSS">
@@ -117,7 +130,9 @@
             </div>
           </fieldset>
 
-        <li>
+    </div>
+
+    <div class="col-md-3">
         <label class="formTitle">SWITCH</label>
         <label for="switch">Compatibility?</label>
         <select class="compatibilityOptions" id="switch" ng-model="data.switch">
@@ -125,7 +140,7 @@
             <option>No</option>
             <option>Untested</option>
         </select>
-        </li>
+        <ul>
           <fieldset class="form-group formElement">
             <label for="reactivityS">Reactivity?</label>
             <div class="checkboxCSS">
@@ -151,8 +166,9 @@
             </div>
             </div>
           </fieldset>
+    </div>
 
-        <li>
+    <div class="col-md-3">
         <label class="formTitle">MAP</label>
         <label for="MAP">Compatibility?</label>
         <select class="compatibilityOptions" id="map" ng-model="data.map">
@@ -160,7 +176,6 @@
             <option>No</option>
             <option>Untested</option>
         </select>
-        </li>
           <fieldset class="form-group formElement">
             <label for="reactivityM">Reactivity?</label>
             <div class="checkboxCSS">
@@ -189,6 +204,52 @@
         </ul>
         </fieldset>
     </div>
+    </ul>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+              <label class="formTitle" for="description">Antibody Description</label>
+        <div class="md-form">
+          <textarea type="text" class="md-textarea" id="description" ng-model="data.description"></textarea>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+              <label class="formTitle" for="video">Video Upload</label>
+         <div class="md-form">
+          <input placeholder="Enter YouTube URL" type="text" class="form-control" id="videoURL" ng-model="data.videoURL">
+        </div>
+
+         <div class="md-form">
+          <textarea type="text" placeholder="Video Description" class="md-textarea" id="videoDescription" ng-model="data.videoDescription"></textarea>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+              <label class="formTitle" for="video">Image Upload</label>
+         <div class="md-form">
+          <input placeholder="Enter Image URL" type="text" class="form-control" id="imageURL" ng-model="data.imageURL">
+        </div>
+
+         <div class="md-form">
+          <textarea type="text" placeholder="Image Description" class="md-textarea" id="imageDescription" ng-model="data.imageDescription"></textarea>
+        </div>
+      </div>
+
+        <div class="col-md-4">
+              <label class="formTitle" for="video">Protocol Upload</label>
+         <div class="md-form">
+          <input placeholder="Enter Protocol URL" type="text" class="form-control" id="protocolURL" ng-model="data.protocolURL">
+        </div>
+
+         <div class="md-form">
+          <textarea type="text" placeholder="Protocol Description" class="md-textarea" id="protocolDescription" ng-model="data.protocolDescription"></textarea>
+        </div>
+      </div>
+
+</div>
 
         <button type="default" class="btn btn-primary" type="submit" ng-click="submit()">Add Antibody</button>
         </form>

@@ -23,7 +23,13 @@ const AntibodySchema = new Schema({
   reactivityS: [String],
   map: String,
   reactivityM: [String],
-  publication: String,
+  description: String,
+  videoURL: String,
+  videoDescription: String,
+  imageURL: String,
+  imageDescription: String,
+  protocolURL: String,
+  protocolDescription: String,
 });
 
 const Antibody = mongoose.model('antibody', AntibodySchema);

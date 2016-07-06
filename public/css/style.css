@@ -37,6 +37,7 @@
 
 .formElement {
 	padding-top: 15px;
+	padding-left: 0px;
 }
 
 .profileTitle {
@@ -65,4 +66,8 @@
 
 .yesMan {
 	color: #81C784;
+}
+
+.selectorz {
+	padding-top: 50px;
 }
